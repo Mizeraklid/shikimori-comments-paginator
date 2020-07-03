@@ -1,0 +1,27 @@
+{
+   "background": {
+      "scripts": [ "background.js" ]
+   },
+   "browser_action": {
+      "default_title": "Shikimori-comments"
+   },
+   "content_scripts": [
+      {
+         "css": [ "wrapper.css" ],
+         "js": [ "wrapper.js" ],
+         "matches": [ "http://shikimori.one/*", "https://shikimori.one/*" ],
+         "run_at": "document_end"
+      }
+   ],
+   "description": "Custom comments paging for site",
+   "manifest_version": 2,
+   "name": "Shikimori-comments",
+   "options_ui": {
+      "chrome_style": true,
+      "page": "options.html"
+   },
+   "permissions": [ "http://shikimori.one/*", "https://shikimori.one/*", "storage"],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "0.0.1",
+   "web_accessible_resources": [ "icons/*.png", "fonts/*.woff", "script.js" ]
+}
