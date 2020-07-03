@@ -71,7 +71,7 @@ function injectScript() {
 
 
 }
-console.log(chrome.runtime.id);
+// console.log(chrome.runtime.id);
 
 document.addEventListener("page-update", function(data) {
   chrome.storage.local.set({[pageUri]: data.detail}, function (result) {
